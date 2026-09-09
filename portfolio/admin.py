@@ -18,3 +18,27 @@ class ProfileAdmin(admin.ModelAdmin):
         "email",
         "summary",
     )
+
+    fieldsets = (
+        (
+            "Basic Information",
+            {
+                "fields": (
+                    "name",
+                    "headline",
+                    "summary",
+                    "profile_image",
+                )
+            },
+        ),
+        (
+            "Contact Information",
+            {
+                "fields": (
+                    "email",
+                    "phone",
+                    "location",
+                )
+            },
+        ),
+    )
